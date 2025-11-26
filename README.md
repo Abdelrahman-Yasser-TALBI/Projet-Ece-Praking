@@ -1,5 +1,4 @@
-# Projet-Ece-Praking-
-# 🚗 Parking Intelligent
+# 🚗 Projet Ece Praking Intelligent
 
 Application en C pour la gestion complète d'un parking avec statistiques et sauvegarde persistante.
 
