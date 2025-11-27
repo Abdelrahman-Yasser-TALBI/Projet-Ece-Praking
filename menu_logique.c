@@ -13,9 +13,9 @@ void afficherMenu() {
     printf("║     PARKING INTELLIGENT v1.0           ║\n");
     printf("╚════════════════════════════════════════╝\n");
     printf("\n");
-    printf("  1. 🚗 Enregistrer une entrée\n");
+    printf("  1. 🚗 Enregistrer une entree\n");
     printf("  2. 🚙 Enregistrer une sortie\n");
-    printf("  3. 📋 Voir les voitures présentes\n");
+    printf("  3. 📋 Voir les voitures presentes\n");
     printf("  4. 📜 Afficher l'historique complet\n");
     printf("  5. 📊 Afficher les statistiques\n");
     printf("  6. 💾 Sauvegarder et quitter\n");
@@ -46,15 +46,15 @@ void traiterEntree() {
     int heure;
     
     printf("\n┌─────────────────────────────┐\n");
-    printf("│   ENREGISTREMENT ENTRÉE     │\n");
+    printf("│   ENREGISTREMENT ENTREE     │\n");
     printf("└─────────────────────────────┘\n\n");
     
-    printf("Plaque d'immatriculation : ");
+    printf("Plaque d immatriculation : ");
     scanf("%s", plaque);
     
-    printf("Heure d'entrée (0-23) : ");
+    printf("Heure d entree (0-23) : ");
     if (scanf("%d", &heure) != 1) {
-        printf("❌ Entrée invalide !\n");
+        printf("❌ Entree invalide !\n");
         while (getchar() != '\n');
         return;
     }
@@ -74,12 +74,12 @@ void traiterSortie() {
     printf("│   ENREGISTREMENT SORTIE     │\n");
     printf("└─────────────────────────────┘\n\n");
     
-    printf("Plaque d'immatriculation : ");
+    printf("Plaque d immatriculation : ");
     scanf("%s", plaque);
     
     printf("Heure de sortie (0-23) : ");
     if (scanf("%d", &heure) != 1) {
-        printf("❌ Entrée invalide !\n");
+        printf("❌ Entree invalide !\n");
         while (getchar() != '\n');
         return;
     }
@@ -102,7 +102,7 @@ void afficherHistorique() {
     }
     
     printf("┌──────────┬────────┬────────┬─────────┬──────────┐\n");
-    printf("│  Plaque  │ Entrée │ Sortie │  Durée  │  Montant │\n");
+    printf("│  Plaque  │ Entree │ Sortie │  Duree  │  Montant │\n");
     printf("├──────────┼────────┼────────┼─────────┼──────────┤\n");
     
     for (int i = 0; i < nbVoitures; i++) {
@@ -158,7 +158,7 @@ void executerMenu() {
                 break;
             case 6:
                 sauvegarderDonnees();
-                printf("\n✅ Données sauvegardées. Au revoir !\n\n");
+                printf("\n✅ Données sauvegardees. Au revoir !\n\n");
                 continuer = 0;
                 break;
             default:
