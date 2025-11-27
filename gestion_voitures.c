@@ -45,7 +45,7 @@ int ajouterVoiture(const char* plaque, int heureEntree) {
     
     // Vérification si la voiture est déjà présente
     if (verifierExistence(plaque)) {
-        printf("❌ Cette voiture est déjà dans le parking !\n");
+        printf("❌ Cette voiture est dejq dans le parking !\n");
         return 0;
     }
     
@@ -62,7 +62,7 @@ int ajouterVoiture(const char* plaque, int heureEntree) {
     parking[nbVoitures].montant = 0.0;
     nbVoitures++;
     
-    printf("✅ Voiture %s enregistrée à %dh\n", plaque, heureEntree);
+    printf("✅ Voiture %s enregistree à %dh\n", plaque, heureEntree);
     return 1;
 }
 
@@ -74,13 +74,13 @@ int enregistrerSortie(const char* plaque, int heureSortie) {
     int index = rechercherVoiture(plaque);
     
     if (index == -1) {
-        printf("❌ Voiture non trouvée dans le parking !\n");
+        printf("❌ Voiture non trouvee dans le parking !\n");
         return 0;
     }
     
     // Validation de l'heure
     if (heureSortie < 0 || heureSortie > 23) {
-        printf("❌ Heure invalide (doit être entre 0 et 23) !\n");
+        printf("❌ Heure invalide (doit etre entre 0 et 23) !\n");
         return 0;
     }
     
@@ -100,7 +100,7 @@ int enregistrerSortie(const char* plaque, int heureSortie) {
     printf("Plaque      : %s\n", parking[index].plaque);
     printf("Entrée      : %dh\n", parking[index].heureEntree);
     printf("Sortie      : %dh\n", parking[index].heureSortie);
-    printf("Durée       : %d heure(s)\n", duree);
+    printf("Duree       : %d heure(s)\n", duree);
     printf("Montant     : %.2f €\n", parking[index].montant);
     printf("═══════════════════════════════\n\n");
     
@@ -119,7 +119,7 @@ void afficherVoituresPresentes() {
     
     for (int i = 0; i < nbVoitures; i++) {
         if (parking[i].heureSortie == -1) {
-            printf("🚗 Plaque: %-10s | Entrée: %2dh\n", 
+            printf("🚗 Plaque: %-10s | Entree: %2dh\n", 
                    parking[i].plaque, 
                    parking[i].heureEntree);
             compteur++;
@@ -130,5 +130,5 @@ void afficherVoituresPresentes() {
         printf("   Aucune voiture dans le parking.\n");
     }
     
-    printf("\n   Total: %d voiture(s) présente(s)\n\n", compteur);
+    printf("\n   Total: %d voiture(s) presente(s)\n\n", compteur);
 }
