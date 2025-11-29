@@ -1,0 +1,5 @@
+# Fichiers générés par la compilation et l'exécution
+*.o
+*.exe
+parking
+*.txt
