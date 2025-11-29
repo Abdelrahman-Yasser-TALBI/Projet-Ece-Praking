@@ -8,15 +8,15 @@
 typedef struct {
     char plaque[TAILLE_PLAQUE];
     int heureEntree;
-    int heureSortie;  // -1 si pas encore sortie
+    int heureSortie;    // -1 si pas encore sortie
     float montant;
 } Voiture;
 
-// Variables globales partagées
+// Variables globales partagees
 extern Voiture parking[MAX_VOITURES];
 extern int nbVoitures;
 
-// Prototypes des fonctions - Étudiant 1
+// Prototypes des fonctions - Etudiant 1
 int ajouterVoiture(const char* plaque, int heureEntree);
 int rechercherVoiture(const char* plaque);
 int verifierExistence(const char* plaque);

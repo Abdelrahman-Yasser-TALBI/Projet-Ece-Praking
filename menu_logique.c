@@ -9,18 +9,18 @@
  */
 void afficherMenu() {
     printf("\n");
-    printf("╔════════════════════════════════════════╗\n");
-    printf("║     PARKING INTELLIGENT v1.0           ║\n");
-    printf("╚════════════════════════════════════════╝\n");
+    printf("========================================\n");
+    printf("|     PARKING INTELLIGENT v1.0         |\n");
+    printf("========================================\n");
     printf("\n");
-    printf("  1. 🚗 Enregistrer une entree\n");
-    printf("  2. 🚙 Enregistrer une sortie\n");
-    printf("  3. 📋 Voir les voitures presentes\n");
-    printf("  4. 📜 Afficher l'historique complet\n");
-    printf("  5. 📊 Afficher les statistiques\n");
-    printf("  6. 💾 Sauvegarder et quitter\n");
+    printf("   1. a Enregistrer une entree\n");
+    printf("   2. v Enregistrer une sortie\n");
+    printf("   3. - Voir les voitures presentes\n");
+    printf("   4. / Afficher l'historique complet\n");
+    printf("   5. B Afficher les statistiques\n");
+    printf("   6. S Sauvegarder et quitter\n");
     printf("\n");
-    printf("  Votre choix : ");
+    printf("   Votre choix : ");
 }
 
 /**
@@ -29,7 +29,7 @@ void afficherMenu() {
 int lireChoix() {
     int choix;
     if (scanf("%d", &choix) != 1) {
-        // Nettoyage du buffer en cas d'entrée invalide
+        // Nettoyage du buffer en cas d'entree invalide
         while (getchar() != '\n');
         return -1;
     }
@@ -39,22 +39,22 @@ int lireChoix() {
 }
 
 /**
- * Gère l'entrée d'une nouvelle voiture
+ * Gere l'entree d'une nouvelle voiture
  */
 void traiterEntree() {
     char plaque[TAILLE_PLAQUE];
     int heure;
     
-    printf("\n┌─────────────────────────────┐\n");
-    printf("│   ENREGISTREMENT ENTREE     │\n");
-    printf("└─────────────────────────────┘\n\n");
+    printf("\n-----------------------------\n");
+    printf("|   ENREGISTREMENT ENTREE     |\n");
+    printf("-----------------------------\n\n");
     
     printf("Plaque d immatriculation : ");
     scanf("%s", plaque);
     
     printf("Heure d entree (0-23) : ");
     if (scanf("%d", &heure) != 1) {
-        printf("❌ Entree invalide !\n");
+        printf("x Entree invalide !\n");
         while (getchar() != '\n');
         return;
     }
@@ -64,22 +64,22 @@ void traiterEntree() {
 }
 
 /**
- * Gère la sortie d'une voiture
+ * Gere la sortie d'une voiture
  */
 void traiterSortie() {
     char plaque[TAILLE_PLAQUE];
     int heure;
     
-    printf("\n┌─────────────────────────────┐\n");
-    printf("│   ENREGISTREMENT SORTIE     │\n");
-    printf("└─────────────────────────────┘\n\n");
+    printf("\n-----------------------------\n");
+    printf("|   ENREGISTREMENT SORTIE     |\n");
+    printf("-----------------------------\n\n");
     
     printf("Plaque d immatriculation : ");
     scanf("%s", plaque);
     
     printf("Heure de sortie (0-23) : ");
     if (scanf("%d", &heure) != 1) {
-        printf("❌ Entree invalide !\n");
+        printf("x Entree invalide !\n");
         while (getchar() != '\n');
         return;
     }
@@ -92,38 +92,38 @@ void traiterSortie() {
  * Affiche l'historique complet des tickets
  */
 void afficherHistorique() {
-    printf("\n╔═══════════════════════════════════════════════════════════════╗\n");
-    printf("║                    HISTORIQUE COMPLET                         ║\n");
-    printf("╚═══════════════════════════════════════════════════════════════╝\n\n");
+    printf("\n===============================================================\n");
+    printf("|                    HISTORIQUE COMPLET                       |\n");
+    printf("===============================================================\n\n");
     
     if (nbVoitures == 0) {
-        printf("  Aucun ticket enregistré.\n\n");
+        printf("   Aucun ticket enregistre.\n\n");
         return;
     }
     
-    printf("┌──────────┬────────┬────────┬─────────┬──────────┐\n");
-    printf("│  Plaque  │ Entree │ Sortie │  Duree  │  Montant │\n");
-    printf("├──────────┼────────┼────────┼─────────┼──────────┤\n");
+    printf("----------+--------+--------+---------+----------\n");
+    printf("| Plaque   | Entree | Sortie | Duree   | Montant |\n");
+    printf("----------+--------+--------+---------+----------\n");
     
     for (int i = 0; i < nbVoitures; i++) {
-        printf("│ %-8s │  %2dh   │", 
-               parking[i].plaque, 
-               parking[i].heureEntree);
+        printf("| %-8s |   %2dh   |", 
+                parking[i].plaque, 
+                parking[i].heureEntree);
         
         if (parking[i].heureSortie == -1) {
-            printf("  --    │   --    │    --    │\n");
+            printf("   --     |   --    |   --      |\n");
         } else {
             int duree = parking[i].heureSortie - parking[i].heureEntree;
             if (duree < 0) duree += 24;
             
-            printf("  %2dh   │  %2dh    │  %.2f €  │\n",
-                   parking[i].heureSortie,
-                   duree,
-                   parking[i].montant);
+            printf("   %2dh   |   %2dh    |   %.2f e  |\n",
+                    parking[i].heureSortie,
+                    duree,
+                    parking[i].montant);
         }
     }
     
-    printf("└──────────┴────────┴────────┴─────────┴──────────┘\n\n");
+    printf("----------+--------+--------+---------+----------\n\n");
 }
 
 /**
@@ -133,7 +133,7 @@ void executerMenu() {
     int choix;
     int continuer = 1;
     
-    // Chargement des données au démarrage
+    // Chargement des donnees au demarrage
     chargerDonnees();
     
     while (continuer) {
@@ -158,15 +158,15 @@ void executerMenu() {
                 break;
             case 6:
                 sauvegarderDonnees();
-                printf("\n✅ Données sauvegardees. Au revoir !\n\n");
+                printf("\na Donnees sauvegardees. Au revoir !\n\n");
                 continuer = 0;
                 break;
             default:
-                printf("\n❌ Choix invalide ! Veuillez choisir entre 1 et 6.\n");
+                printf("\nx Choix invalide ! Veuillez choisir entre 1 et 6.\n");
         }
         
         if (continuer) {
-            printf("\nAppuyez sur ENTRÉE pour continuer...");
+            printf("\nAppuyez sur ENTREE pour continuer...");
             getchar();
         }
     }

@@ -1,7 +1,7 @@
 #ifndef MENU_LOGIQUE_H
 #define MENU_LOGIQUE_H
 
-// Prototypes des fonctions - Étudiant 2
+// Prototypes des fonctions - Etudiant 2
 void afficherMenu();
 int lireChoix();
 void traiterEntree();

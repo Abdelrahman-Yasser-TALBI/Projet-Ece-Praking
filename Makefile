@@ -6,13 +6,13 @@ TARGET = parking
 SOURCES = main.c gestion_voitures.c menu_logique.c statistiques.c
 OBJECTS = $(SOURCES:.c=.o)
 
-# Règle par défaut
+# Regle par defaut
 all: $(TARGET)
 
 # Compilation du programme
 $(TARGET): $(OBJECTS)
 	$(CC) $(CFLAGS) -o $(TARGET) $(OBJECTS)
-	@echo "✅ Compilation réussie ! Lancez avec: ./$(TARGET)"
+	@echo "a Compilation reussie ! Lancez avec: ./$(TARGET)"
 
 # Compilation des fichiers objets
 %.o: %.c
@@ -21,9 +21,9 @@ $(TARGET): $(OBJECTS)
 # Nettoyage
 clean:
 	rm -f $(OBJECTS) $(TARGET)
-	@echo "🧹 Fichiers nettoyés"
+	@echo "v Fichiers nettoyes"
 
-# Recompilation complète
+# Recompilation complete
 rebuild: clean all
 
 # Test rapide
@@ -33,9 +33,9 @@ test: all
 # Afficher l'aide
 help:
 	@echo "Commandes disponibles:"
-	@echo "  make         - Compile le programme"
-	@echo "  make clean   - Supprime les fichiers compilés"
-	@echo "  make rebuild - Recompile tout"
-	@echo "  make test    - Compile et lance le programme"
+	@echo " 	make 	 	 - Compile le programme"
+	@echo " 	make clean 	 - Supprime les fichiers compiles"
+	@echo " 	make rebuild - Recompile tout"
+	@echo " 	make test 	 - Compile et lance le programme"
 
 .PHONY: all clean rebuild test help

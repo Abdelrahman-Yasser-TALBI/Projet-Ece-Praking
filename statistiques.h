@@ -3,7 +3,7 @@
 
 #define FICHIER_DONNEES "parking.txt"
 
-// Prototypes des fonctions - Étudiant 3
+// Prototypes des fonctions - Etudiant 3
 void afficherStatistiques();
 void sauvegarderDonnees();
 void chargerDonnees();

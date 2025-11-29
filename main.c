@@ -1,13 +1,11 @@
 /**
  * PARKING INTELLIGENT
- * 
- * Programme de gestion d'un parking avec:
- * - Enregistrement des entrées/sorties
- * - Calcul automatique des montants (2€/heure)
+ * * Programme de gestion d'un parking avec:
+ * - Enregistrement des entrees/sorties
+ * - Calcul automatique des montants (2e/heure)
  * - Statistiques
  * - Sauvegarde persistante
- * 
- * Auteurs: [Noms des étudiants]
+ * * Auteurs: [Noms des etudiants]
  * Date: [Date]
  */
 
@@ -18,9 +16,9 @@
 
 int main() {
     printf("\n");
-    printf("╔════════════════════════════════════════╗\n");
-    printf("║   Bienvenue au Parking Intelligent !   ║\n");
-    printf("╚════════════════════════════════════════╝\n");
+    printf("========================================\n");
+    printf("|   Bienvenue au Parking Intelligent !   |\n");
+    printf("========================================\n");
     printf("\n");
     
     // Lancement du menu principal
