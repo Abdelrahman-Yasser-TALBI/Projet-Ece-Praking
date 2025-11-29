@@ -112,7 +112,7 @@ EF789IJ 16 20 8.00
 
 ## 👥 Répartition du Travail
 
-### Étudiant 1 - Gestion des données (`gestion_voitures.c/h`)
+### TALBI Abdelrahman Yasser - Gestion des données (`gestion_voitures.c/h`)
 - ✅ Structure de données `Voiture`
 - ✅ Ajout de véhicules dans le tableau
 - ✅ Recherche par plaque d'immatriculation
@@ -121,7 +121,7 @@ EF789IJ 16 20 8.00
 - ✅ Calcul des montants
 - ✅ Affichage des véhicules présents
 
-### Étudiant 2 - Menu et logique (`menu_logique.c/h`)
+### TAMDA Lamiae - Menu et logique (`menu_logique.c/h`)
 - ✅ Menu interactif avec interface utilisateur
 - ✅ Gestion des entrées utilisateur
 - ✅ Validation des données
@@ -129,7 +129,7 @@ EF789IJ 16 20 8.00
 - ✅ Affichage de l'historique
 - ✅ Boucle principale du programme
 
-### Étudiant 3 - Statistiques et fichiers (`statistiques.c/h`)
+### LAARIF Ilyas - Statistiques et fichiers (`statistiques.c/h`)
 - ✅ Sauvegarde dans fichier texte
 - ✅ Chargement au démarrage
 - ✅ Calcul du revenu total
