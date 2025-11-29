@@ -232,12 +232,12 @@ Projet académique - Libre d'utilisation pour l'apprentissage
 
 ## 👨‍💻 Auteurs
 
-- **Étudiant 1** : [Nom] - Gestion des données
-- **Étudiant 2** : [Nom] - Menu et logique  
-- **Étudiant 3** : [Nom] - Statistiques et fichiers
+- **Étudiant 1** : TALBI Abdelrahman Yasser - Gestion des données
+- **Étudiant 2** : TAMDA Lamiae - Menu et logique  
+- **Étudiant 3** : LAARIF Ilyas - Statistiques et fichiers
 
 ---
 
-**Date de réalisation** : [Date]  
-**Cours** : Programmation en C  
-**Institution** : [Nom de l'école/université]
+**Date de réalisation** :  25/11/2025
+**Cours** : Programmation e/n C  /
+**Institution** : [ECE Campus de Lyon]
